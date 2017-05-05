@@ -1,12 +1,12 @@
 {
   "name": "starter",
   "version": "1.0.0",
-  "description": "microservice starter",
+  "description": "example rest API",
   "repository": {
     "type": "git",
     "url": "https://github.com/Blended/starter.git"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "babel ./lib -d ./dist",
     "clean:modules": "rm -rf node_modules",
@@ -15,7 +15,8 @@
     "precommit": "yarn lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "ava -v",
-    "test:watch": "ava -v --watch"
+    "test:watch": "ava -v --watch",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "MIT",

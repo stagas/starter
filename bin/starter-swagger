@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const program = require('commander')
 const pkg = require('../package')
-const swaggerGenerator = require('../lib/swagger-generator')
+const swaggerGenerator = require('../dist/swagger-generator')
 
 
 /**
