@@ -3,5 +3,5 @@
 require('commander')
   .version(require('../package').version)
   .usage('<command> [options]')
-  .command('swagger', 'generate a swagger')
+  .command('test', 'test api routes using swagger')
   .parse(process.argv)
