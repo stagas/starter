@@ -2,6 +2,10 @@
   "name": "starter",
   "version": "1.0.0",
   "description": "microservice starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blended/starter.git"
+  },
   "main": "index.js",
   "scripts": {
     "build": "babel ./lib -d ./dist",
