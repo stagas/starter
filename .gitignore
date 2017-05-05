@@ -1,4 +1,5 @@
+# Dependencies handled by npm/yarn
 node_modules
 
-.envrc*
-swagger.json
+# Generated ES5 build
+dist
