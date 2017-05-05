@@ -9,7 +9,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel ./lib -d ./dist",
-    "dev": "nodemon index.js --exec babel-node -e js,yml,json",
+    "dev": "babel --watch ./lib -d ./dist",
     "clean:modules": "rm -rf node_modules",
     "clean:install": "yarn clean:modules && yarn clean && yarn install",
     "lint": "standard --fix",
