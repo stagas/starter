@@ -9,6 +9,7 @@
     "clean:install": "yarn clean:modules && yarn clean && yarn install",
     "lint": "standard --fix",
     "precommit": "yarn lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "ava -v",
     "test:watch": "ava -v --watch"
   },
