@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/blended/starter.svg?branch=master)](https://travis-ci.org/blended/starter)
 starter
 =======
 
