@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+const program = require('commander')
+const pkg = require('../package')
+const swaggerGenerator = require('../lib/swagger-generator')
+
+
+/**
+ * Usage.
+ */
+
+program
+  .option('-P, --path <n>', 'path to swagger file')
+  .parse(process.argv)
+
+const options = {
+  file: program.path
+}
+
+swaggerGenerator(options)
