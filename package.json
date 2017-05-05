@@ -4,13 +4,13 @@
   "description": "microservice starter",
   "main": "index.js",
   "scripts": {
-    "precommit": "yarn lint",
     "build": "babel ./lib -d ./dist",
     "clean:modules": "rm -rf node_modules",
     "clean:install": "yarn clean:modules && yarn clean && yarn install",
+    "lint": "standard --fix",
+    "precommit": "yarn lint",
     "test": "ava -v",
-    "test:watch": "ava -v --watch",
-    "lint": "standard --fix"
+    "test:watch": "ava -v --watch"
   },
   "author": "",
   "license": "MIT",
