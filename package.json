@@ -6,23 +6,18 @@
     "type": "git",
     "url": "https://github.com/Blended/starter.git"
   },
-  "bin": {
-    "starter": "./bin/starter",
-    "starter-test": "./bin/starter-test"
-  },
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel ./lib -d ./dist",
     "dev": "babel --watch ./lib -d ./dist",
     "clean:modules": "rm -rf node_modules",
     "clean:install": "yarn clean:modules && yarn clean && yarn install",
-    "lint": "standard --fix",
+    "lint": "eslint index.js lib test",
     "precommit": "yarn lint",
     "semantic-release": "semantic-release pre && npm publish --access=public && semantic-release post",
-    "test": "ava -v",
-    "test:watch": "ava -v --watch",
-    "postinstall": "npm run build",
-    "test:swagger": "babel-node libs/swagger-tests"
+    "test": "mocha --require babel-register test/{**,**/**}-test.js",
+    "test:watch": "mocha --watch --require babel-register test/{**,**/**}-test.js",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "MIT",
@@ -60,7 +55,6 @@
   },
   "devDependencies": {
     "amanda": "^0.5.1",
-    "ava": "^0.19.1",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -72,9 +66,11 @@
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.3.0",
     "nodemon": "^1.11.0",
     "semantic-release": "^6.3.2",
     "sinon": "^2.1.0"
